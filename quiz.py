@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import plotly.graph_objects as go
+#import plotly.graph_objects as go
 
 
 st.subheader("Hello Learner!! This is a quiz for ML.")
@@ -176,19 +176,19 @@ if st.button("Submit"):
     total_questions = len(correct_answers)
     score_percentage = (total_score / total_questions) * 100
 
-    # Plot a gauge chart to visualize the score percentage
-    fig = go.Figure(go.Indicator(
-        mode="gauge+number",
-        value=score_percentage,
-        title={'text': "Score Percentage"},
-        gauge={'axis': {'range': [None, 100]},
-            'bar': {'color': "darkblue"},
-            'steps': [
-                {'range': [0, 60], 'color': "red"},
-                {'range': [60, 80], 'color': "orange"},
-                {'range': [80, 100], 'color': "green"}]
-    }))
+    # # Plot a gauge chart to visualize the score percentage
+    # fig = go.Figure(go.Indicator(
+    #     mode="gauge+number",
+    #     value=score_percentage,
+    #     title={'text': "Score Percentage"},
+    #     gauge={'axis': {'range': [None, 100]},
+    #         'bar': {'color': "darkblue"},
+    #         'steps': [
+    #             {'range': [0, 60], 'color': "red"},
+    #             {'range': [60, 80], 'color': "orange"},
+    #             {'range': [80, 100], 'color': "green"}]
+    # }))
 
-    st.plotly_chart(fig)
+    # st.plotly_chart(fig)
 
 
